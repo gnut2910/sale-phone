@@ -17,7 +17,6 @@ const SortBar: React.FC = () => {
         : [...prev, brand_id]
     );
   };
-  const toggleSort = () => {};
 
   return (
     <div style={{ padding: 20 }}>
@@ -49,17 +48,14 @@ const SortBar: React.FC = () => {
 
       <h3>Sắp xếp theo giá</h3>
       <div>
-        <button
-          className="border-1 rounded p-1 mr-2 cursor-pointer"
-          onClick={toggleSort}
-        >
+        <button className="border rounded p-1 mr-2 mt-2 cursor-pointer hover:bg-gray-200">
           Giá Cao - Thấp
         </button>
 
-        <button className="border-1 rounded p-1 mr-2 cursor-pointer">
+        <button className="border rounded p-1 mr-2 cursor-pointer hover:bg-gray-200">
           Giá Thấp - Cao
         </button>
-        <button className="border-1 rounded p-1 mr-2 cursor-pointer">
+        <button className="border rounded p-1 mr-2 cursor-pointer hover:bg-gray-200">
           Mặc định
         </button>
       </div>

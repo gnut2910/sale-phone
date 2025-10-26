@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axiosClient from "../../apis/product.ts";
 import { type Product } from "../../types/product";
 import ProductCard from "../../components/ProductCard/index.tsx";
+import { Button } from "antd";
+import { Link } from "react-router";
 // import SortBar from "../../components/SortBar/index.tsx";
 
 const HomePage = () => {
@@ -17,7 +19,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="container mx-auto px-6 mb-10">
+      <div className="container mx-auto px-6 mb-10 ">
         <div>
           <h1 className=" text-2xl font-bold mt-10 ">Danh sách sản phẩm</h1>
           {/* <SortBar /> */}
@@ -27,6 +29,14 @@ const HomePage = () => {
             <ProductCard key={p.id} product={p} rating={5} />
           ))}
         </div>
+        <Link to="/products" className="flex justify-center items-center h-20 ">
+          <Button
+            size="large"
+            className=" bg-gray-200 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:bg-gray-300"
+          >
+            Load More
+          </Button>
+        </Link>
       </div>
     </>
   );

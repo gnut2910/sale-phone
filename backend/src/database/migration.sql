@@ -11,3 +11,7 @@ CREATE TABLE products (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE brand (
+    brand_id INT PRIMARY KEY,
+    brand_name VARCHAR(100) NOT NULL
+)

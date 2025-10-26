@@ -28,3 +28,20 @@ export const getProductById = (req, res) => {
     res.json(result[0]);
   });
 };
+
+export const getSortedProducts = async (req, res) => {
+  const sortBy = req.query.sortBy || "price";
+  const order = req.query.order === "desc" ? "DESC" : "ASC";
+
+  const validFields = ["price", "brand"];
+  if (!validFields.includes(sortBy)) {
+    return res.status(400).json({ message: "Invalid sort field" });
+  }
+
+  const sql = `SELECT * FROM products ORDER BY ${sortBy} ${order}`;
+
+  db.query(sql, (err, result) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(result);
+  });
+};
