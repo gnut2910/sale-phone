@@ -15,7 +15,7 @@ const ProductCard: React.FC<Props> = ({ product, rating }) => {
       className="container mx-auto px-6 mb-10 border-1 rounded-lg p-6 mx-3 hover:bg-gray-100"
     >
       <img
-        src={`http://localhost:5000${product.image_url}`}
+        src={`https://artistic-enthusiasm-production.up.railway.app${product.image_url}`}
         alt={product.name}
         className="w-50 h-40 object-fix mx-auto w-40 h-40 object-contain mx-auto transition-transform duration-300 hover:scale-105  "
       />

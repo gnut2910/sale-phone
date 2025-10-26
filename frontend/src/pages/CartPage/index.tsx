@@ -46,7 +46,7 @@ const CartPage: React.FC = () => {
                 className="flex items-center border rounded-lg p-4 shadow"
               >
                 <img
-                  src={`http://localhost:5000${item.image_url}`}
+                  src={`https://artistic-enthusiasm-production.up.railway.app${item.image_url}`}
                   alt={item.name}
                   className="w-24 h-24 object-cover rounded"
                 />

@@ -28,7 +28,7 @@ const ProductDetailPage = () => {
         {/* Ảnh sản phẩm */}
         <div className="flex justify-center">
           <img
-            src={`http://localhost:5000${product.image_url}`}
+            src={`https://artistic-enthusiasm-production.up.railway.app${product.image_url}`}
             alt={product.name}
             className="w-full max-w-md object-cover rounded-lg shadow-lg"
           />

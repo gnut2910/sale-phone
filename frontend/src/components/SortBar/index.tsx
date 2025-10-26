@@ -5,7 +5,7 @@ const SortBar: React.FC = () => {
   const [brands, setBrands] = useState<Brand[]>([]);
   const [selectedBrands, setSelectedBrands] = useState<number[]>([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/brands")
+    fetch("https://artistic-enthusiasm-production.up.railway.app/api/brands")
       .then((res) => res.json())
       .then((data) => setBrands(data))
       .catch(console.error);
